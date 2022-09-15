@@ -1,0 +1,45 @@
+--
+--Оптимизация запросов
+--
+--Решил оптимизировать такой запрос, т.к. его анализ показал такие результаты:
+--"Planning Time: 0.785 ms"
+--"Execution Time: 2.277 ms"
+--
+EXPLAIN ANALYSE
+SELECT
+	(SELECT nik_name FROM users WHERE users.user_id=coins.user_id) AS "Владелец",
+	(SELECT email FROM users WHERE users.user_id=coins.user_id) AS "Почта",
+	coins.denomination AS "Номинал",
+	(SELECT url FROM photo WHERE photo.photo_id=obverse_id) AS "Фото",
+	coins.year,
+	amount
+FROM coins
+	ORDER BY amount DESC
+	LIMIT 20;
+
+--	
+--Оптимизировал через JOIN
+--"Planning Time: 0.773 ms"
+--"Execution Time: 0.655 ms"
+
+EXPLAIN ANALYSE
+SELECT
+	users.nik_name AS "Владелец",
+	users.email AS "Почта",
+	coins.denomination AS "Номинал",
+	photo.url AS "Фото",
+	coins.year AS "Год Выпуска",
+	amount AS "Количество"
+FROM coins
+	LEFT JOIN users ON users.user_id = coins.user_id
+	LEFT JOIN photo ON photo.photo_id = coins.obverse_id
+ORDER BY amount DESC
+	LIMIT 20;
+	
+--
+--Создал индексы, но они не принесли ощутимой пользы.
+--Для первоначального запроса время улучшилось, стало "Execution Time: 2.007 ms"
+--А для запрос с JOIN время не изменилось. 
+
+CREATE INDEX user_id_fk ON coins (user_id);
+CREATE INDEX obverse_id_fk ON coins (obverse_id);
