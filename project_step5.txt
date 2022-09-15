@@ -1,0 +1,26 @@
+--
+--Многотабличные запросы
+--
+--Выводит ТОП 20 людей с наибольшим количеством монет
+SELECT
+	(SELECT nik_name FROM users WHERE users.user_id=coins.user_id) AS "Владелец",
+	(SELECT email FROM users WHERE users.user_id=coins.user_id) AS "Почта",
+	coins.denomination AS "Номинал",
+	(SELECT url FROM photo WHERE photo.photo_id=obverse_id) AS "Фото",
+	coins.year,
+	amount
+FROM coins
+	ORDER BY amount DESC
+	LIMIT 20;
+
+--	
+--Вывести владельцев золотых монет
+--
+SELECT
+	(SELECT nik_name FROM users WHERE users.user_id=coins.user_id) AS "Владелец",
+	(SELECT country_name FROM countries WHERE countries.country_id=coins.country_id) AS "Страна",
+	(SELECT series_name FROM series WHERE series.series_id=coins.series_id) AS "Серия",
+	denomination AS "Номинал",
+	description AS "Металл"
+FROM coins 
+		WHERE description = 'золото'

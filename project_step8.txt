@@ -1,0 +1,15 @@
+--
+--Функция определет ID пользователей которые отправили пердложения о покупке золотых монет, сортирует и считает сколько раз.
+--
+CREATE FUNCTION most_active_purchaser (user_id INTEGER, OUT id BIGINT, OUT count_send_massages BIGINT)
+AS
+$$
+SELECT 
+	from_user_id,
+	(COUNT(*))
+	FROM messages
+	where body = 'куплю монеты золотые'
+GROUP BY from_user_id
+ORDER BY COUNT(*) DESC
+$$
+LANGUAGE SQL;

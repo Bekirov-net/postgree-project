@@ -1,0 +1,49 @@
+--
+--Функция определет ID пользователей которые отправили пердложения о покупке золотых монет, сортирует и считает сколько раз.
+--
+CREATE FUNCTION most_active_purchaser (user_id INTEGER, OUT id BIGINT, OUT count_send_massages BIGINT)
+AS
+$$
+SELECT 
+	from_user_id,
+	(COUNT(*))
+	FROM messages
+	where body = 'куплю монеты золотые'
+GROUP BY from_user_id
+ORDER BY COUNT(*) DESC
+$$
+LANGUAGE SQL;
+
+--
+--step9
+--Триггер проверяет, что бы фото аверса монеты пренадлежало владельцу этой же монеты
+--
+CREATE OR REPLACE FUNCTION update_owner_photo_trigger()
+RETURNS TRIGGER AS
+$$
+DECLARE new_owner_id INTEGER;
+ BEGIN
+      new_owner_id := (SELECT owner_id FROM photo WHERE photo_id = NEW.obverse_id);
+      IF new_owner_id IS NOT NULL AND NEW.user_id != new_owner_id THEN
+                    RAISE EXCEPTION 'Error: Photo does not belong to this user';
+END IF;
+RETURN NEW;
+END
+$$
+LANGUAGE PLPGSQL;
+
+
+CREATE TRIGGER check_owner_photo_on_update BEFORE UPDATE ON coins
+    FOR EACH ROW
+EXECUTE FUNCTION update_owner_photo_trigger();
+
+
+
+--------------------------------
+--Доп. команды для проверки работы:
+DROP TRIGGER IF EXISTS check_owner_photo_on_update ON coins;
+DROP FUNCTION update_owner_photo_trigger;
+
+SELECT * FROM photo WHERE owner_id = 50;
+UPDATE coins SET obverse_id = 586 WHERE coin_id = 820;
+select * from coins where coin_id = 820

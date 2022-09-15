@@ -1,0 +1,104 @@
+--
+--Создание внешних ключей
+--
+ALTER TABLE messages
+ADD CONSTRAINT messages_to_user_id_fk
+FOREIGN KEY (to_user_id)
+REFERENCES users (users_id)
+ON DELETE CASCADE;
+
+ALTER TABLE messages
+ADD CONSTRAINT messages_from_user_id_fk
+FOREIGN KEY (from_user_id)
+REFERENCES users (user_id)
+ON DELETE CASCADE;
+
+ALTER TABLE video
+ADD CONSTRAINT owner_id_fk
+FOREIGN KEY (owner_id)
+REFERENCES users (user_id)
+ON DELETE CASCADE;
+
+ALTER TABLE photo
+ADD CONSTRAINT owner_id_fk
+FOREIGN KEY (owner_id)
+REFERENCES users (user_id)
+ON DELETE CASCADE;
+
+ALTER TABLE communities
+ADD CONSTRAINT creator_id_fk
+FOREIGN KEY (creator_id)
+REFERENCES users(user_id)
+ON DELETE CASCADE;
+
+ALTER TABLE communities_users
+ADD CONSTRAINT user_id_fk
+FOREIGN KEY (user_id)
+REFERENCES users(user_id)
+ON DELETE CASCADE;
+
+ALTER TABLE communities_users
+ADD CONSTRAINT communities_id_fk
+FOREIGN KEY (community_id)
+REFERENCES communities(community_id)
+ON DELETE CASCADE;
+
+ALTER TABLE users
+ADD CONSTRAINT logo_fk
+FOREIGN KEY (logo_id)
+REFERENCES photo(photo_id)
+ON DELETE NO ACTION;
+
+ALTER TABLE coins
+ADD CONSTRAINT user_id_fk
+FOREIGN KEY (user_id)
+REFERENCES users (user_id)
+ON DELETE CASCADE;
+
+ALTER TABLE coins
+ADD CONSTRAINT country_id_fk
+FOREIGN KEY (country_id)
+REFERENCES countries (countries_id)
+ON DELETE CASCADE;
+
+ALTER TABLE coins
+ADD CONSTRAINT series_id_fk
+FOREIGN KEY (series_id)
+REFERENCES series (series_id)
+ON DELETE CASCADE;
+
+ALTER TABLE coins
+ADD CONSTRAINT condition_id_fk
+FOREIGN KEY (conditions_id)
+REFERENCES conditions (conditions_id)
+ON DELETE CASCADE;
+
+ALTER TABLE coins
+ADD CONSTRAINT mint_id_fk
+FOREIGN KEY (mint_id)
+REFERENCES mints (mint_id)
+ON DELETE CASCADE;
+
+ALTER TABLE coins
+ADD CONSTRAINT obverse_id_fk
+FOREIGN KEY (obverse_id)
+REFERENCES photo (photo_id)
+ON DELETE CASCADE;
+
+ALTER TABLE coins
+ADD CONSTRAINT reverse_id_fk
+FOREIGN KEY (reverse_id)
+REFERENCES photo (photo_id)
+ON DELETE CASCADE;
+
+ALTER TABLE coins
+ADD CONSTRAINT edge_id_fk
+FOREIGN KEY (edge_id)
+REFERENCES photo (photo_id)
+ON DELETE CASCADE;
+
+ALTER TABLE coins
+ADD CONSTRAINT video_id_fk
+FOREIGN KEY (video_id)
+REFERENCES video (video_id)
+ON DELETE CASCADE;

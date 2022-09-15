@@ -1,0 +1,29 @@
+--
+--Создаю представление в виде списка потенциалных покупателей. 
+--Список пользователей ФИО, почта которые состоят в сообществе "Куплю монеты"
+--
+CREATE VIEW buyers_view AS
+SELECT
+	CONCAT(first_name, ' ', last_name) AS "Покупатель",
+	email AS "Почта",
+	communities.community_name AS "В сообществе"
+	FROM users
+	LEFT JOIN communities_users ON communities_users.user_id = users.user_id
+	LEFT JOIN communities ON communities.community_id = communities_users.community_id
+	WHERE community_name = 'Куплю монеты';
+
+
+--
+--Изменяемое представление. Выборка пользователей кто и кому за последний месяц 
+--отправлял сообщение с предложением "куплю монеты золотые"
+--
+CREATE VIEW last_offer_messages AS
+SELECT
+	message_id,
+	from_user_id,
+	to_user_id,
+	body,
+	created_at
+	FROM messages
+	where body = 'куплю монеты золотые'
+	AND created_at > (current_timestamp - interval '1 month');

@@ -1,0 +1,92 @@
+--
+--Создание таблиц
+--
+CREATE TABLE users (
+user_id SERIAL PRIMARY KEY,
+nik_name VARCHAR(20) NOT NULL,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+email VARCHAR(120) NOT NULL UNIQUE,
+logo INT,
+created_at TIMESTAMP
+);
+
+CREATE TABLE messages (
+message_id SERIAL PRIMARY KEY,
+from_user_id INT NOT NULL,
+to_user_id INT NOT NULL,
+body TEXT,
+created_at TIMESTAMP
+);
+
+CREATE TABLE communities (
+community_id SERIAL PRIMARY KEY,
+community_name VARCHAR(120) UNIQUE,
+creator_id INT NOT NULL,
+created_at TIMESTAMP
+);
+
+CREATE TABLE communities_users (
+community_user_id SERIAL PRIMARY KEY,
+user_id INT NOT NULL,
+community_id INT,
+get_in TIMESTAMP NOT NULL
+);
+
+CREATE TABLE photo (
+photo_id SERIAL PRIMARY KEY,
+url VARCHAR(250) NOT NULL UNIQUE,
+owner_id INT NOT NULL,
+description VARCHAR(250) NOT NULL,
+uploaded_at TIMESTAMP NOT NULL,
+size INT NOT NULL
+);
+
+CREATE TABLE video (
+video_id SERIAL PRIMARY KEY,
+url VARCHAR(250) NOT NULL UNIQUE,
+owner_id INT NOT NULL,
+description VARCHAR(250) NOT NULL,
+uploaded_at TIMESTAMP NOT NULL,
+size INT NOT NULL
+);
+
+CREATE TABLE countries (
+country_id SERIAL PRIMARY KEY,
+country_name VARCHAR(250) NOT NULL
+);
+
+CREATE TABLE series (
+series_id SERIAL PRIMARY KEY,
+series_name VARCHAR(250) NOT NULL
+);
+
+CREATE TABLE conditions (
+conditions_id SERIAL PRIMARY KEY,
+conditions_status VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE mints (
+mint_id SERIAL PRIMARY KEY,
+mint_name VARCHAR(180) NOT NULL
+);
+
+CREATE TABLE coins (
+coin_id SERIAL PRIMARY KEY,
+user_id INT NOT NULL,
+denomination VARCHAR(180) NOT NULL,
+country_id INT NOT NULL,
+series_id INT NOT NULL,
+year INT,
+conditions_id INT NOT NULL,
+obverse_id INT,
+reverse_id INT,
+edge_id INT,
+video_id INT,
+mint_id INT,
+--тираж
+circulation INT,
+--колличество
+amount INT NOT NULL,
+description VARCHAR(250)
+);

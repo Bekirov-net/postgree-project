@@ -1,0 +1,41 @@
+--
+--Запросы с JOIN и без
+--
+--С JOIN. Ищем владельцев с окисленными монетами и сортируем по убыванию.
+SELECT
+	first_name||' '||last_name AS "Владелец",
+	denomination "Номинал",
+	series.series_name AS "Серия",
+	amount AS "Колличество",
+	conditions.conditions_status AS "Состояние"
+FROM coins
+	LEFT JOIN users
+		ON users.user_id=coins.user_id
+	LEFT JOIN conditions
+		ON conditions.conditions_id = coins.conditions_id
+	LEFT JOIN series
+		ON series.series_id = coins.series_id
+WHERE conditions_status = 'окисленная'
+ORDER BY amount DESC;
+
+
+--
+--Без JOIN с использованием общего табличного выражения
+--Ищем ТОП 20 владельцев с наибольшим количеством монет, выводим данные по их состоянию и металу
+--
+WITH top_20 AS
+	(SELECT user_id, denomination, conditions_id, amount, description
+		FROM coins ORDER BY amount DESC LIMIT 20)
+
+SELECT
+	CONCAT(first_name, ' ', last_name) AS "Владелец",
+	top_20.denomination AS "Номинал",
+	top_20.amount AS "Колличество",
+	conditions.conditions_status AS "Состояние",
+	top_20.description AS "Металл"
+	FROM users
+		JOIN top_20
+			ON top_20.user_id = users.user_id
+		JOIN conditions
+			ON conditions.conditions_id = top_20.conditions_id
+ORDER BY amount DESC;
