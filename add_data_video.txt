@@ -1,0 +1,126 @@
+--
+--Данные для таблицы video
+--
+
+
+
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (300,'http://guardian.co.uk/settings?search=1',14,'convallis convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt','Aug 12, 2023',2413),
+  (301,'https://nytimes.com/user/110?ad=115',9,'porttitor tellus non magna. Nam ligula elit, pretium et, rutrum','Jul 3, 2023',2563),
+  (302,'https://pinterest.com/site?search=1&q=de',29,'Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non','Jan 28, 2022',1987),
+  (303,'http://google.com/sub/cars?q=0',14,'Nulla facilisi. Sed neque. Sed eget lacus. Mauris non dui','Aug 15, 2022',1617),
+  (304,'https://yahoo.com/one?search=1&q=de',18,'a, arcu. Sed et libero. Proin mi. Aliquam gravida mauris','Sep 30, 2022',2773),
+  (305,'https://cnn.com/settings?search=1',39,'mauris. Integer sem elit, pharetra ut, pharetra sed, hendrerit a,','Jul 28, 2023',1715),
+  (306,'http://ebay.com/en-ca?q=4',9,'sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus','Aug 6, 2023',2266),
+  (307,'http://walmart.com/en-ca?q=11',13,'non dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu.','Nov 15, 2022',2394),
+  (308,'https://ebay.com/settings?search=1&q=de',99,'pede nec ante blandit viverra. Donec tempus, lorem fringilla ornare','Jun 20, 2022',1794),
+  (309,'https://zoom.us/user/110?str=se',22,'netus et malesuada fames ac turpis egestas. Fusce aliquet magna','Jul 27, 2023',2296);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (310,'https://cnn.com/sub?q=0',99,'eleifend nec, malesuada ut, sem. Nulla interdum. Curabitur dictum. Phasellus','Sep 11, 2022',1933),
+  (311,'https://walmart.com/sub?search=1',12,'malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna.','Feb 22, 2023',2636),
+  (312,'http://wikipedia.org/settings?gi=100',69,'lacinia. Sed congue, elit sed consequat auctor, nunc nulla vulputate','Nov 1, 2021',2565),
+  (313,'http://twitter.com/en-ca?search=1&q=de',52,'amet ante. Vivamus non lorem vitae odio sagittis semper. Nam','Jul 5, 2023',2500),
+  (314,'https://reddit.com/settings?q=4',25,'ornare tortor at risus. Nunc ac sem ut dolor dapibus','Apr 21, 2022',2594),
+  (315,'https://twitter.com/fr?q=11',4,'tristique senectus et netus et malesuada fames ac turpis egestas.','Jan 1, 2022',2376),
+  (316,'http://pinterest.com/user/110?ad=115',82,'Cras dolor dolor, tempus non, lacinia at, iaculis quis, pede.','Jun 12, 2023',2903),
+  (317,'https://google.com/site?search=1&q=de',10,'Nunc commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque','Mar 13, 2023',2546),
+  (318,'https://naver.com/fr?ab=441&aad=2',41,'fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem','Nov 14, 2022',2910),
+  (319,'https://netflix.com/site?str=se',31,'Donec nibh enim, gravida sit amet, dapibus id, blandit at,','Feb 27, 2023',2269);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (320,'http://yahoo.com/fr?q=11',68,'a, magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.','May 13, 2023',2126),
+  (321,'https://wikipedia.org/en-us?q=4',75,'quam. Pellentesque habitant morbi tristique senectus et netus et malesuada','Oct 10, 2021',2410),
+  (322,'https://nytimes.com/one?k=0',89,'In tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum','Feb 15, 2022',2505),
+  (323,'http://facebook.com/en-ca?p=8',3,'enim mi tempor lorem, eget mollis lectus pede et risus.','Oct 17, 2022',2801),
+  (324,'https://guardian.co.uk/en-ca?ab=441&aad=2',18,'urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante ipsum','Sep 22, 2021',1729),
+  (325,'https://walmart.com/settings?q=4',51,'Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo.','Dec 10, 2021',2198),
+  (326,'http://facebook.com/settings?q=test',26,'ornare. Fusce mollis. Duis sit amet diam eu dolor egestas','Oct 15, 2021',2918),
+  (327,'http://twitter.com/one?ad=1415',70,'Quisque nonummy ipsum non arcu. Vivamus sit amet risus. Donec','Dec 9, 2022',2992),
+  (328,'http://netflix.com/settings?g=1',58,'nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat.','May 21, 2022',2859),
+  (329,'https://pinterest.com/sub/cars?q=test',9,'at pretium aliquet, metus urna convallis erat, eget tincidunt dui','Jan 28, 2022',2737);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (330,'https://bbc.co.uk/site?search=1',8,'Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis','Apr 2, 2022',2982),
+  (331,'https://bbc.co.uk/group/9?search=1',47,'lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie.','Oct 27, 2021',1632),
+  (332,'http://twitter.com/one?ad=1165',39,'ipsum sodales purus, in molestie tortor nibh sit amet orci.','Oct 27, 2022',1654),
+  (333,'http://ebay.com/en-ca?q=11',34,'justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed','Feb 17, 2022',2472),
+  (334,'http://nytimes.com/one?ad=1105',63,'pretium neque. Morbi quis urna. Nunc quis arcu vel quam','Aug 12, 2023',2384),
+  (335,'https://reddit.com/site?q=test',28,'Nullam vitae diam. Proin dolor. Nulla semper tellus id nunc','Jul 8, 2023',2767),
+  (336,'https://instagram.com/site?q=11',69,'leo. Vivamus nibh dolor, nonummy ac, feugiat non, lobortis quis,','Mar 8, 2022',2450),
+  (337,'http://google.com/en-us?q=11',88,'a ultricies adipiscing, enim mi tempor lorem, eget mollis lectus','Nov 30, 2021',2760),
+  (338,'https://whatsapp.com/group/9?gi=100',3,'enim, gravida sit amet, dapibus id, blandit at, nisi. Cum','Sep 7, 2023',2704),
+  (339,'http://nytimes.com/group/9?q=0',67,'Nullam scelerisque neque sed sem egestas blandit. Nam nulla magna,','Nov 16, 2022',2487);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (340,'https://netflix.com/en-us?q=11',96,'Cras dolor dolor, tempus non, lacinia at, iaculis quis, pede.','Aug 28, 2022',2458),
+  (341,'http://google.com/fr?str=se',85,'vestibulum nec, euismod in, dolor. Fusce feugiat. Lorem ipsum dolor','Feb 11, 2022',2957),
+  (342,'http://youtube.com/group/9?p=8',78,'neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec est. Nunc','Dec 22, 2021',1639),
+  (343,'http://whatsapp.com/fr?str=se',29,'Ut tincidunt orci quis lectus. Nullam suscipit, est ac facilisis','Apr 14, 2022',1932),
+  (344,'http://zoom.us/sub?str=se',77,'vitae, sodales at, velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum','Mar 19, 2022',2467),
+  (345,'https://yahoo.com/en-us?ad=115',11,'molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis.','Feb 18, 2022',1593),
+  (346,'http://zoom.us/site?str=se',19,'non, bibendum sed, est. Nunc laoreet lectus quis massa. Mauris','Nov 24, 2021',2315),
+  (347,'https://nytimes.com/one?search=1&q=de',90,'nibh. Quisque nonummy ipsum non arcu. Vivamus sit amet risus.','Mar 20, 2022',2200),
+  (348,'http://twitter.com/en-us?page=1&offset=1',94,'mauris ipsum porta elit, a feugiat tellus lorem eu metus.','Dec 3, 2021',2390),
+  (349,'https://nytimes.com/user/110?q=11',22,'et, eros. Proin ultrices. Duis volutpat nunc sit amet metus.','Oct 21, 2022',1750);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (350,'https://guardian.co.uk/settings?ad=115',23,'consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet posuere, enim','Dec 15, 2021',2566),
+  (351,'https://walmart.com/en-ca?ab=441&aad=2',35,'ac turpis egestas. Fusce aliquet magna a neque. Nullam ut','Jul 22, 2022',2572),
+  (352,'http://netflix.com/settings?str=se',78,'Suspendisse dui. Fusce diam nunc, ullamcorper eu, euismod ac, fermentum','Mar 20, 2023',1968),
+  (353,'http://zoom.us/site?q=4',70,'ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus.','Mar 15, 2022',1911),
+  (354,'http://baidu.com/en-us?str=se',92,'non quam. Pellentesque habitant morbi tristique senectus et netus et','Oct 10, 2021',2368),
+  (356,'http://youtube.com/en-us?gi=100',23,'id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis','Jun 12, 2023',2246),
+  (357,'http://bbc.co.uk/one?p=8',33,'eget nisi dictum augue malesuada malesuada. Integer id magna et','Nov 18, 2022',2825),
+  (358,'https://baidu.com/user/110?ab=441&aad=2',28,'orci, consectetuer euismod est arcu ac orci. Ut semper pretium','Oct 1, 2021',2229),
+  (359,'https://zoom.us/sub?g=1',35,'tellus. Nunc lectus pede, ultrices a, auctor non, feugiat nec,','Aug 5, 2023',2962),
+  (355,'http://netflix.com/sub/cars?p=8',28,'eu nulla at sem molestie sodales. Mauris blandit enim consequat','Apr 22, 2023',1532);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (360,'http://reddit.com/sub?ab=441&aad=2',49,'tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus aliquet odio.','May 18, 2022',1930),
+  (361,'http://wikipedia.org/site?p=8',30,'nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet.','Sep 12, 2021',2572),
+  (362,'http://baidu.com/settings?q=4',98,'eu augue porttitor interdum. Sed auctor odio a purus. Duis','Jun 21, 2023',2845),
+  (363,'http://google.com/sub?q=test',51,'convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit','Oct 1, 2022',2193),
+  (364,'https://pinterest.com/fr?search=1',36,'eu, accumsan sed, facilisis vitae, orci. Phasellus dapibus quam quis','Jul 29, 2023',2854),
+  (365,'http://bbc.co.uk/en-ca?ad=115',22,'in faucibus orci luctus et ultrices posuere cubilia Curae Phasellus','Feb 24, 2022',2676),
+  (366,'https://bbc.co.uk/site?gi=100',88,'urna. Nunc quis arcu vel quam dignissim pharetra. Nam ac','Aug 13, 2022',2512),
+  (367,'https://ebay.com/sub/cars?client=g',20,'vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus','May 5, 2023',1630),
+  (368,'https://yahoo.com/user/110?ab=441&aad=2',19,'blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae','Oct 31, 2021',2532),
+  (369,'https://walmart.com/en-ca?client=g',54,'metus eu erat semper rutrum. Fusce dolor quam, elementum at,','May 13, 2023',2680);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (370,'http://guardian.co.uk/group/9?str=se',76,'ut erat. Sed nunc est, mollis non, cursus non, egestas','Mar 18, 2022',1629),
+  (371,'https://pinterest.com/en-ca?client=g',56,'commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa','Apr 13, 2022',2137),
+  (372,'https://wikipedia.org/settings?g=1',81,'vulputate, lacus. Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non','Apr 15, 2022',1760),
+  (373,'https://youtube.com/settings?page=1&offset=1',43,'cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut','Dec 14, 2021',2674),
+  (374,'http://ebay.com/sub?q=0',8,'risus. Nulla eget metus eu erat semper rutrum. Fusce dolor','Jun 24, 2023',1543),
+  (375,'http://nytimes.com/one?p=8',87,'mi. Aliquam gravida mauris ut mi. Duis risus odio, auctor','Sep 7, 2022',2039),
+  (376,'http://walmart.com/en-us?q=11',18,'vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus','Mar 30, 2023',2013),
+  (377,'http://nytimes.com/group/9?search=1&q=de',79,'nec, leo. Morbi neque tellus, imperdiet non, vestibulum nec, euismod','Jun 18, 2022',2204),
+  (378,'https://zoom.us/user/110?gi=100',99,'mattis semper, dui lectus rutrum urna, nec luctus felis purus','Feb 4, 2022',2458),
+  (379,'http://cnn.com/group/9?search=1&q=de',95,'tellus sem mollis dui, in sodales elit erat vitae risus.','Oct 10, 2021',2762);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (380,'https://pinterest.com/settings?ab=441&aad=2',72,'Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet','Jan 24, 2023',2256),
+  (381,'http://whatsapp.com/user/110?g=1',93,'Ut tincidunt vehicula risus. Nulla eget metus eu erat semper','Mar 8, 2022',2452),
+  (382,'http://google.com/fr?page=1&offset=1',79,'enim, condimentum eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin','Aug 3, 2023',1836),
+  (383,'https://bbc.co.uk/sub/cars?search=1&q=de',86,'Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam','Jan 23, 2022',2003),
+  (384,'http://whatsapp.com/sub/cars?ab=441&aad=2',64,'nunc. In at pede. Cras vulputate velit eu sem. Pellentesque','May 21, 2023',2570),
+  (385,'https://reddit.com/en-ca?ab=441&aad=2',55,'sem elit, pharetra ut, pharetra sed, hendrerit a, arcu. Sed','Oct 18, 2021',2302),
+  (386,'https://whatsapp.com/en-ca?str=se',72,'adipiscing, enim mi tempor lorem, eget mollis lectus pede et','Jul 16, 2022',2270),
+  (387,'http://instagram.com/fr?q=test',86,'augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel,','May 15, 2022',2468),
+  (388,'http://zoom.us/en-ca?gi=100',10,'tincidunt, neque vitae semper egestas, urna justo faucibus lectus, a','Feb 4, 2022',2071),
+  (389,'http://wikipedia.org/user/110?str=se',83,'ullamcorper, velit in aliquet lobortis, nisi nibh lacinia orci, consectetuer','Apr 19, 2022',2848);
+INSERT INTO video (video_id,url,owner_id,description,uploaded_at,size)
+VALUES
+  (390,'http://reddit.com/group/9?page=1&offset=1',70,'ornare sagittis felis. Donec tempor, est ac mattis semper, dui','Jul 6, 2023',2148),
+  (392,'https://cnn.com/site?q=test',79,'urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim.','Jul 29, 2023',1822),
+  (391,'https://whatsapp.com/en-us?q=0',38,'In ornare sagittis felis. Donec tempor, est ac mattis semper,','Jun 28, 2023',1775),
+  (393,'http://guardian.co.uk/settings?g=1',58,'scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia. Sed','Apr 11, 2022',1887),
+  (394,'https://guardian.co.uk/sub?g=1',58,'Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies','Apr 27, 2023',2666),
+  (395,'https://netflix.com/group/9?p=8',45,'Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus.','Jan 18, 2023',2121),
+  (396,'https://bbc.co.uk/en-us?q=4',27,'elementum, dui quis accumsan convallis, ante lectus convallis est, vitae','May 5, 2023',2233),
+  (397,'https://instagram.com/group/9?ad=115',48,'lacus. Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non leo.','Jun 14, 2022',2448),
+  (398,'http://guardian.co.uk/user/110?p=8',78,'mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla,','May 26, 2023',1767),
+  (399,'https://naver.com/settings?q=11',64,'libero. Proin mi. Aliquam gravida mauris ut mi. Duis risus','Dec 13, 2021',1632);

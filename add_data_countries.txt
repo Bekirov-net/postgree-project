@@ -1,0 +1,50 @@
+--
+--Данные для таблицы countries
+--
+INSERT INTO countries (country_id,country_name)
+VALUES
+  (1,'СССР'),
+  (2,'США'),
+  (3,'Аргентина'),
+  (4,'Индия'),
+  (5,'Россия'),
+  (6,'Куба');
+  
+
+--
+--Данные для таблицы series
+--
+INSERT INTO series (series_id,series_name)
+VALUES
+  (10,'Красная книга'),
+  (20,'Пайса'),
+  (30,'100 лет Аргентина'),
+  (40,'Индия'),
+  (50,'Великая война');
+  
+--
+--
+--
+INSERT INTO conditions (conditions_id,conditions_status)
+VALUES
+  (1,'новая'),
+  (2,'потертая'),
+  (3,'сколыя'),
+  (4,'окисленная'),
+  (5,'со сколом');
+  
+--
+--
+--
+INSERT INTO mints (mint_id,mint_name)
+VALUES
+  (1,'СПМД'),
+  (2,'ММД'),
+  (3,'W'),
+  (4,'D'),
+  (5,'Мумбай'),
+  (6, 'Калькульта'),
+  (7, 'Estado'),
+   (8, 'Kuba');
+
+  
